@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+//split ama free all fonksiyonu yok fakat sınav için yeterli
 static int	is_sep(char c)
 {
 	return (c == ' ' || c == '\t' || c == '\n');
