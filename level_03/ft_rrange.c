@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int	*ft_range(int start, int end)
+int	*ft_rrange(int start, int end)
 {
 	int	*arr;
 	int	size;
@@ -17,22 +17,22 @@ int	*ft_range(int start, int end)
 	while (i < size)
 	{
 		if (start <= end)
-			arr[i++] = start++;
+			arr[i++] = end--;
 		else
-			arr[i++] = start--;
+			arr[i++] = end++;
 	}
 	return (arr);
 }
 
-/*int main()
-{
-	int *arr;
-	arr = ft_range(0,-3);
-	int	i = 0;
-	while (i < 4)
-	{
-		printf("%d\n",arr[i]);
-		i++;
-	}
-	free(arr);
-}*/
+// int main()
+// {
+// 	int *arr;
+// 	arr = ft_rrange(0,-3);
+// 	int	i = 0;
+// 	while (i < 4)
+// 	{
+// 		printf("%d\n",arr[i]);
+// 		i++;
+// 	}
+// 	free(arr);
+// }

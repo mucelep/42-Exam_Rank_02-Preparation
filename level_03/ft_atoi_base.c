@@ -14,7 +14,7 @@ int	ft_atoi_base(const char *str, int str_base)
 	int	i;
 	int	sign;
 	int	res;
-	int	cval;
+	int	cval;//char value 0123456789abcef
 
 	sign = 1;
 	i = 0;
@@ -38,6 +38,6 @@ int	ft_atoi_base(const char *str, int str_base)
 
 int main(){
 	int nbr;
-	nbr = ft_atoi_base("010100101010101",2);
+	nbr = ft_atoi_base("01010010101",2);
 	printf("%d",nbr);
 }
