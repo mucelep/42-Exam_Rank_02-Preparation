@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 //split ama free all fonksiyonu yok fakat sınav için yeterli
-static int	is_sep(char c)
+static int	is_sep(char c)// subjectte tab ve new line i katıyo diye kısa yol tek tek yazmamak için
 {
 	return (c == ' ' || c == '\t' || c == '\n');
 }
@@ -78,27 +78,27 @@ char	**ft_split(char *str)
 	return (split);
 }
 
-int	main(void)
-{
-	int	i = 0;
-	char	**result;
+// int	main(void)
+// {
+// 	int	i = 0;
+// 	char	**result;
 
-	// Test string
-	char str[] = "   hello   world   this is 42   ";
+// 	// Test string
+// 	char str[] = "   hello   world   this is 42   ";
 
-	result = ft_split(str);
+// 	result = ft_split(str);
 
-	if (!result)
-	{
-		printf("malloc fail\n");
-		return (1);
-	}
-	while (result[i])
-	{
-		printf("word[%d]: %s\n", i, result[i]);
-		free(result[i]); // tek tek free
-		i++;
-	}
-	free(result); // pointer array free
-	return (0);
-}
+// 	if (!result)
+// 	{
+// 		printf("malloc fail\n");
+// 		return (1);
+// 	}
+// 	while (result[i])
+// 	{
+// 		printf("word[%d]: %s\n", i, result[i]);
+// 		free(result[i]); // tek tek free
+// 		i++;
+// 	}
+// 	free(result); // pointer array free
+// 	return (0);
+// }
