@@ -6,11 +6,11 @@ void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 
 	while (*begin_list)
 	{
-		if (!cmp((*begin_list)->data, data_ref))
+		if (!cmp((*begin_list)->data, data_ref))//cmp dısarıdan gelen fonksiyon esit ise return 0;
 		{
-			tmp = *begin_list;
-			*begin_list = tmp->next;
-			free(tmp);
+			tmp = *begin_list;//listenin silinecek elemanı tut freelemek için
+			*begin_list = tmp->next;//sil
+			free(tmp);//freele orjinali de freelenir tek * da
 		}
 		else
 			begin_list = &(*begin_list)->next;// ikiside **
