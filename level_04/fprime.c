@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//asal çarpan matematik formulu n = n / p  |en kucukten basla tam bölünenleri yazdır sayıyı küçült
 void	fprime(int n)
 {
 	int	p;
@@ -16,11 +17,13 @@ void	fprime(int n)
 		{
 			printf("%d", p);
 			n = n / p;
-			if (n > 1)
+			if (n > 1)//sona koymasın
 				printf("*");
+			if (n == 1)
+				break;
 		}
 		else
-			p++;
+			p++;//bölünmüyorsa sayıyı geçsin
 	}
 }
 
@@ -28,6 +31,6 @@ int main(int argc, char **argv)
 {
 	if (argc == 2)
 		fprime(atoi(argv[1]));
-	write(1, "\n", 1);
+	printf("\n");
 	return (0);
 }
